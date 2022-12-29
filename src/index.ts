@@ -381,7 +381,7 @@ function decodeMessagesWithPayloadBoundedVec(hashString: string) {
 function decodeMessagesInner(_decodedMessages: any[]) {
   let decodedMessages: any[] = _decodedMessages;
   decodedMessages.forEach((cdm: any) => {
-    cdm.payload = decodeMessagePayload(cdm.payloadType, cdm.payload);
+    cdm.payload = decodeMessagePayload(cdm.payload_type, cdm.payload);
   });
   return decodedMessages;
 }
